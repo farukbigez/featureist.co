@@ -49,6 +49,8 @@
     "@types/node": "^16.4.1",
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
     "autoprefixer": "^10.3.1",
     "concurrently": "^6.2.0",
     "env-cmd": "^10.1.0",
