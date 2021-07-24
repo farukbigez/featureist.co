@@ -1,27 +1,59 @@
 {
-  "name": "ts-express-graphql-boilerplate",
-  "version": "1.0.0",
-  "description": "Node + Typescript + Express + Apollo + Graphql + Mongo Boilerplate",
-  "main": "dist/index.js",
+  "name": "featureist.co",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "PORT=4000 react-scripts start",
+    "watch": "concurrently --restart-tries 10 --names \"webpack,stylus\" --prefix name \"npm run start\" \"npm run styles-watch-all\"",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "iconize": "svgr --typescript --icon --out-dir ./src/components/Icons ./src/assets/icons",
+    "build:production": "env-cmd -f .env.production yarn run build-step:react",
+    "build:development": "env-cmd -f .env.development yarn run build-step:react",
+    "build-step:react": "yarn run build-step:styles && react-scripts build && yarn run build-step:root",
+    "build-step:styles": "run-p styles:**",
+    "build-step:root": "deploy-rewrite featureist",
+    "styles:main": "stylus -r --include-css -u autoprefixer-stylus ./src/assets/stylus/main.styl -o ./src/assets/css/main.css",
+    "styles-watch-all": "run-p styles-watch:**",
+    "styles-watch:main": "stylus -r --include-css -u autoprefixer-stylus -w ./src/assets/stylus/main.styl -o ./src/assets/css/main.css"
   },
-  "author": "farukbigez",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/dotenv": "^8.2.0",
-    "@types/express": "^4.17.8",
-    "@types/mongoose": "^5.7.36",
-    "@types/node": "^14.11.2",
-    "nodemon": "^2.0.4",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.0.3"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "dependencies": {
-    "apollo-server": "^2.18.1",
-    "apollo-server-express": "^2.18.1",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.10.7"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.0",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.1",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "autoprefixer": "^10.3.1",
+    "concurrently": "^6.2.0",
+    "env-cmd": "^10.1.0",
+    "stylus": "^0.54.8",
+    "typescript": "^4.3.5",
+    "web-vitals": "^2.1.0"
   }
 }

@@ -1,0 +1,9 @@
+{
+	"window.title": "Featurist.co${separator}${activeEditorShort}",
+	"workbench.colorCustomizations": {
+		"titleBar.activeForeground": "#ffffff",
+		"titleBar.inactiveForeground": "#ffffffCC",
+		"titleBar.activeBackground": "#f94141",
+		"titleBar.inactiveBackground": "#a1227bcc"
+	}
+}
