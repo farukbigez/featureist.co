@@ -1,0 +1,20 @@
+:root {
+  --bodyFont: "'Poppins', sans-serif";
+  --brandingFont: "'Rubik', sans-serif;", "'Poppins', sans-serif";
+  --blue: #2196f3;
+  --green: #28cd41;
+  --stroke: #dadada;
+  --purpleButton: linear-gradient(90deg, rgba(255,107,0,0.09) 57.55%, rgba(0,0,0,0) 75.47%), #7f52ca;
+  --black: #000;
+  --notActive: #aaa;
+  --bodyText: #9b9b9b;
+  --purple: #7f52ca;
+  --yellow: #ffda63;
+  --white: #fff;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
