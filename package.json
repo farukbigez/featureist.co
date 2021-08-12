@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "PORT=4000 react-scripts start",
+    "start": "PORT=4001 react-scripts start",
     "watch": "concurrently --restart-tries 10 --names \"webpack,stylus\" --prefix name \"npm run start\" \"npm run styles-watch-all\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -13,9 +13,9 @@
     "build-step:react": "yarn run build-step:styles && react-scripts build && yarn run build-step:root",
     "build-step:styles": "run-p styles:**",
     "build-step:root": "cd build && mkdir root && mv *.html *.json ./root",
-    "styles:main": "stylus -r --include-css -u autoprefixer-stylus ./src/assets/stylus/pages/main.styl -o ./src/assets/css/main.css",
+    "styles:main": "stylus -r --include-css -u autoprefixer-stylus ./src/assets/stylus/main.styl -o ./src/assets/css/main.css",
     "styles-watch-all": "run-p styles-watch:**",
-    "styles-watch:main": "stylus -r --include-css -u autoprefixer-stylus -w ./src/assets/stylus/pages/main.styl -o ./src/assets/css/main.css"
+    "styles-watch:main": "stylus -r --include-css -u autoprefixer-stylus -w ./src/assets/stylus/main.styl -o ./src/assets/css/main.css"
   },
   "eslintConfig": {
     "extends": [
@@ -36,6 +36,8 @@
     ]
   },
   "dependencies": {
+    "classnames": "^2.3.1",
+    "modern-css-reset": "^1.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
@@ -58,6 +60,9 @@
     "autoprefixer-stylus": "^1.0.0",
     "concurrently": "^6.2.1",
     "env-cmd": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.24.0",
+    "npm-run-all": "^4.1.5",
     "run-p": "^0.0.0",
     "stylus": "^0.54.8",
     "typescript": "^4.3.5",

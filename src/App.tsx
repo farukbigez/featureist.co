@@ -13,7 +13,7 @@ export default function App() {
 			<Switch>
 
 				<LandingLayout>
-					<Route path={[ '/login', 'register', 'forgot-password', 'reset-password' ]}>
+					<Route path={[ '/','/login', 'register', 'forgot-password', 'reset-password' ]}>
 						<Switch>
 							<Route path="/login"  />
 						</Switch>
