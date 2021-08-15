@@ -73,6 +73,8 @@ select {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
+  color: inherit;
 }
 body {
   font-family: var(--bodyFont);
@@ -86,6 +88,10 @@ body {
       -ms-user-select: none;
           user-select: none;
   cursor: default;
+  text-rendering: inherit;
+}
+svg {
+  flex-shrink: 0;
 }
 .header {
   display: flex;
@@ -95,6 +101,7 @@ body {
   height: 60px;
   top: 0;
   padding: 20px 40px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
 }
 .header .header-logo svg {
   width: 160px;
@@ -102,8 +109,33 @@ body {
 }
 .header .header-links a {
   padding-right: 40px;
-  color: var(--bodyText);
+  font-size: 15px;
+  font-weight: 600;
 }
 .footer {
   display: flex;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
 }

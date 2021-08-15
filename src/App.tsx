@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom'
 import './assets/css/main.css'
 
 import NotFound from './pages/NotFound'
+import Home from './pages/Home'
 import LandingLayout from './components/Layout/LandingLayout'
 
 export default function App() {
@@ -12,18 +13,21 @@ export default function App() {
 
 			<Switch>
 
-				<LandingLayout>
-					<Route path={[ '/','/login', 'register', 'forgot-password', 'reset-password' ]}>
-						<Switch>
-							<Route path="/login"  />
-						</Switch>
-					</Route>
+				<Route exact path={[ '/','/login', 'register', 'forgot-password', 'reset-password' ]}>
+					<Switch>
+						<LandingLayout>
+							<Route exact path="/" component={Home} />
+							<Route path="/login" />
+						</LandingLayout>
+					</Switch>
+				</Route>
 
-					<Route>
-						<Route path="*" component={NotFound} />
-					</Route>
+				<Route path="*">
+					<LandingLayout>
+						<NotFound />
+					</LandingLayout>
+				</Route>
 
-				</LandingLayout>
 				
 			</Switch>
 		</Router>
