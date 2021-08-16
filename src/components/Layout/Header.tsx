@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import StartButton from '../StartButton'
 import { NavbarLogo } from '../Icons/index'
 
 export default function Header() {
 	return (
 		<div className="header">
 			<div className="header-logo">
-				<a href="/">
+				<Link to="/">
 					<NavbarLogo />
-				</a>
+				</Link>
 
 			</div>
 			<div className="header-links">
@@ -16,6 +17,7 @@ export default function Header() {
 				<Link to="/">Apps</Link>
 				<Link to="/">Community</Link>
 				<Link to="/">Account</Link>
+				<StartButton>Start a Voting</StartButton>
 			</div>
 		</div>
 	)

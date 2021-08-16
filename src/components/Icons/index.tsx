@@ -1,2 +1,8 @@
+export { default as CommunityHuman } from './CommunityHuman'
+export { default as HelpHuman } from './HelpHuman'
+export { default as JoinHuman } from './JoinHuman'
+export { default as LearnHuman } from './LearnHuman'
 export { default as NavbarLogo } from './NavbarLogo'
 export { default as RoundLogo } from './RoundLogo'
+export { default as WhatHuman } from './WhatHuman'
+export { default as WhyHuman } from './WhyHuman'
