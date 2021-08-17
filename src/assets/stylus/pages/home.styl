@@ -25,9 +25,16 @@
             margin-right 64px
             font-size 48px
             font-weight 600
-            background linear-gradient(90deg, rgba(255, 107, 0, 0.09) 57.55%, rgba(0, 0, 0, 0) 75.47%), var(--purple)
+            background linear-gradient(to right, #FF6B00 0, #7F52CA 50%, #7F52CA 20%)
+            background-position 0
             -webkit-background-clip text
             -webkit-text-fill-color transparent
+            animation shine 6s infinite linear
+            animation-fill-mode forwards
+            @keyframes shine
+                100%
+                    background-position 600px
+
         .right-manifest
             display flex
             flex-direction column
@@ -78,6 +85,10 @@
         justify-content space-between
         padding 64px 160px
         margin-bottom 120px
+        border 0.1px solid var(--cardBg)
+        border-radius 12px
+        background var(--cardBg)
+        
 
         .join-text
             font-size 24px

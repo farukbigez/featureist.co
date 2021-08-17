@@ -1,10 +1,9 @@
 :root {
   --bodyFont: "'Poppins', sans-serif";
-  --brandingFont: "'Rubik', sans-serif;", "'Poppins', sans-serif";
   --blue: #2196f3;
   --green: #28cd41;
   --stroke: #dadada;
-  --steel: #768598;
+  --cardBg: #f7f8fc;
   --black: #000;
   --notActive: #aaa;
   --bodyText: #1d1d1d;
@@ -127,6 +126,7 @@ svg {
   height: 120px;
   width: 100%;
   margin-top: 30px;
+  box-shadow: inset 0px 2px 2px rgba(0,0,0,0.25);
 }
 .footer .link-group {
   padding: 40px 180px;
@@ -141,28 +141,28 @@ svg {
 }
 @font-face {
   font-family: 'Poppins';
-  src: url("../fonts/Poppins-Light.ttf");
+  src: url("../fonts/Poppins-Light.woff") format('woff'), url("../fonts/Poppins-Light.woff2") format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
-  src: url("../fonts/Poppins-Regular.ttf");
+  src: url("../fonts/Poppins-Regular.woff") format('woff'), url("../fonts/Poppins-Regular.woff2") format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
-  src: url("../fonts/Poppins-Medium.ttf");
+  src: url("../fonts/Poppins-Medium.woff") format('woff'), url("../fonts/Poppins-Medium.woff2") format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
-  src: url("../fonts/Poppins-SemiBold.ttf");
+  src: url("../fonts/Poppins-SemiBold.woff") format('woff'), url("../fonts/Poppins-SemiBold.woff2") format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -216,9 +216,24 @@ svg {
   margin-right: 64px;
   font-size: 48px;
   font-weight: 600;
-  background: linear-gradient(90deg, rgba(255,107,0,0.09) 57.55%, rgba(0,0,0,0) 75.47%), var(--purple);
+  background: linear-gradient(to right, #ff6b00 0, #7f52ca 50%, #7f52ca 20%);
+  background-position: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 6s infinite linear;
+          animation: shine 6s infinite linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes shine {
+  100% {
+    background-position: 600px;
+  }
+}
+@keyframes shine {
+  100% {
+    background-position: 600px;
+  }
 }
 .home-page .manifest-section .right-manifest {
   display: flex;
@@ -278,6 +293,9 @@ svg {
   justify-content: space-between;
   padding: 64px 160px;
   margin-bottom: 120px;
+  border: 0.1px solid var(--cardBg);
+  border-radius: 12px;
+  background: var(--cardBg);
 }
 .home-page .landing-section .join-text {
   font-size: 24px;
