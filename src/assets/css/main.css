@@ -101,16 +101,38 @@ svg {
   justify-content: space-between;
   width: 100%;
   height: 60px;
-  top: 0;
   padding: 20px 40px;
   box-shadow: 0 4px 4px rgba(0,0,0,0.1);
 }
-.header .header-logo svg {
+.header .header-logo .mobile-logo {
+  visibility: visible;
+  width: 91px;
+  z-index: 1001;
+}
+@media (min-width: 1001px) {
+  .header .header-logo .mobile-logo {
+    visibility: hidden;
+    display: none;
+  }
+}
+.header .header-logo .navbar-logo {
+  visibility: visible;
   width: 160px;
   height: 56px;
 }
+@media (max-width: 1000px) {
+  .header .header-logo .navbar-logo {
+    visibility: hidden;
+    display: none;
+  }
+}
 .header .header-links {
   display: flex;
+}
+@media (max-width: 1000px) {
+  .header .header-links {
+    display: none;
+  }
 }
 .header .header-links a {
   display: flex;
@@ -118,6 +140,20 @@ svg {
   font-size: 15px;
   margin-right: 40px;
   font-weight: 600;
+}
+.header .hamburger-menu {
+  visibility: visible;
+  cursor: pointer;
+}
+.header .hamburger-menu svg {
+  width: 24px;
+  height: 24px;
+}
+@media (min-width: 1001px) {
+  .header .hamburger-menu {
+    visibility: hidden;
+    display: none;
+  }
 }
 .footer {
   display: flex;
@@ -137,7 +173,7 @@ svg {
 }
 .footer .link-group .link-name {
   cursor: pointer;
-  color: var(--steel);
+  color: var(--notActive);
 }
 @font-face {
   font-family: 'Poppins';
@@ -177,12 +213,40 @@ svg {
   background: linear-gradient(90deg, rgba(255,107,0,0.09) 57.55%, rgba(0,0,0,0) 75.47%), var(--purple);
   border: 0.5px solid var(--stroke);
   border-radius: 6px;
+  cursor: pointer;
 }
 .start-button a {
   display: flex;
   margin-right: 0 !important;
   padding: 10px 16px;
   border-radius: 10px;
+}
+.login-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 200px;
+}
+.login-section svg {
+  width: 500px;
+  height: 250px;
+}
+.login-section .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-section .login-form .form-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.login-section .login-form .form-desc {
+  color: var(--notActive);
+}
+.login-section .form-switch {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
 }
 .home-page {
   display: flex;
@@ -216,7 +280,7 @@ svg {
   margin-right: 64px;
   font-size: 48px;
   font-weight: 600;
-  background: linear-gradient(to right, #ff6b00 0, #7f52ca 50%, #7f52ca 20%);
+  background: linear-gradient(to right, #ff6b00 0, #7f52ca 50%, #7f52ca 10%);
   background-position: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -243,6 +307,13 @@ svg {
 .home-page .manifest-section .right-manifest .right-manifest--title {
   font-size: 24px;
   font-weight: 600;
+  transition: -webkit-transform;
+  transition: transform;
+  transition: transform, -webkit-transform;
+}
+.home-page .manifest-section .right-manifest .right-manifest--title:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .home-page .manifest-section .right-manifest .right-manifest--desc {
   margin-bottom: 20px;
@@ -253,6 +324,13 @@ svg {
   height: 58px;
   font-weight: 600;
   border-radius: 12px;
+  transition: -webkit-transform;
+  transition: transform;
+  transition: transform, -webkit-transform;
+}
+.home-page .manifest-section .right-manifest .start-button:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 .home-page .how-section {
   display: flex;

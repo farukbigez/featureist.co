@@ -1,4 +1,6 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
+
 import StartButton from '../components/StartButton'
 import { LearnHuman, HelpHuman, CommunityHuman, WhatHuman, JoinHuman } from '../components/Icons'
 import SvgWhyHuman from '../components/Icons/WhyHuman'
@@ -6,6 +8,9 @@ import SvgWhyHuman from '../components/Icons/WhyHuman'
 export default function Home() {
 	return (
 		<div className="home-page">
+			<Helmet>
+				<title>Featureist.co - New way of the feature</title>
+			</Helmet>
 			
 			<div className="manifest-section">
 				<div className="manifest-text">Take a feature request by your own community.</div>

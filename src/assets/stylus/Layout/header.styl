@@ -4,18 +4,39 @@
     justify-content space-between
     width 100%
     height 60px
-    top 0
     padding 20px 40px
     box-shadow 0 4px 4px rgba(0, 0, 0, 0.1)
     .header-logo
-        svg
+        .mobile-logo
+            visibility visible
+            width 91px
+            z-index 1001
+            @media (min-width: 1001px)
+                visibility hidden
+                display none
+        .navbar-logo
+            visibility visible
             width 160px
             height 56px
+            @media (max-width: 1000px)
+                visibility hidden
+                display none
     .header-links
         display flex
+        @media (max-width: 1000px)
+            display none
         a
             display flex
             align-items center
             font-size 15px
             margin-right 40px
             font-weight 600
+    .hamburger-menu
+        visibility visible
+        cursor pointer
+        svg
+            width 24px
+            height 24px
+        @media (min-width: 1001px)
+            visibility hidden
+            display none

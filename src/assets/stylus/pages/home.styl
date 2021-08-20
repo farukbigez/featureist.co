@@ -25,7 +25,7 @@
             margin-right 64px
             font-size 48px
             font-weight 600
-            background linear-gradient(to right, #FF6B00 0, #7F52CA 50%, #7F52CA 20%)
+            background linear-gradient(to right, #FF6B00 0, #7F52CA 50%, #7F52CA 10%)
             background-position 0
             -webkit-background-clip text
             -webkit-text-fill-color transparent
@@ -42,6 +42,9 @@
             .right-manifest--title
                 font-size 24px
                 font-weight 600
+                transition transform 20ms ease-in-out
+                &:hover
+                    transform scale(1.2)
             .right-manifest--desc
                 margin-bottom 20px
                 color var(--notActive)
@@ -50,6 +53,9 @@
                 height 58px
                 font-weight 600
                 border-radius 12px
+                transition transform 250ms
+                &:hover
+                    transform translateY(-10px)
 
     .how-section
         display flex
