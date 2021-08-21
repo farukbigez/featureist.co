@@ -22,6 +22,7 @@ export default function Header() {
 				<Link to="/">Account</Link>
 				<StartButton>Start a Voting</StartButton>
 			</div>
+			
 			<div className="hamburger-menu">
 				<HambugerMenu />
 			</div>
