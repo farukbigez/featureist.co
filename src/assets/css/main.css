@@ -1,5 +1,33 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-Light.woff") format('woff'), url("../fonts/Poppins-Light.woff2") format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-Regular.woff") format('woff'), url("../fonts/Poppins-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-Medium.woff") format('woff'), url("../fonts/Poppins-Medium.woff2") format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-SemiBold.woff") format('woff'), url("../fonts/Poppins-SemiBold.woff2") format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
-  --bodyFont: "'Poppins', sans-serif";
+  --bodyFont: 'Poppins', sans-serif;
   --blue: #2196f3;
   --green: #28cd41;
   --black: #1d1d1d;
@@ -321,7 +349,7 @@ svg {
   margin-right: 32px;
   font-size: 48px;
   font-weight: 600;
-  width: 50%;
+  width: 45%;
   background: linear-gradient(to right, #ff6b00 0, #7f52ca 50%, #7f52ca 10%);
   background-position: 0;
   -webkit-background-clip: text;
@@ -357,9 +385,9 @@ svg {
   font-size: 32px;
   font-weight: 600;
   color: var(--white);
-  transition: -webkit-transform;
-  transition: transform;
-  transition: transform, -webkit-transform;
+  transition: -webkit-transform 20ms ease-in-out;
+  transition: transform 20ms ease-in-out;
+  transition: transform 20ms ease-in-out, -webkit-transform 20ms ease-in-out;
 }
 .home-page .manifest-section .right-manifest .right-manifest--title:hover {
   -webkit-transform: scale(1.2);
@@ -380,9 +408,9 @@ svg {
   height: 58px;
   font-weight: 600;
   border-radius: 12px;
-  transition: -webkit-transform;
-  transition: transform;
-  transition: transform, -webkit-transform;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
 }
 .home-page .manifest-section .right-manifest .start-button:hover {
   -webkit-transform: translateY(-10px);
