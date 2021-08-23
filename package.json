@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "PORT=4002 react-scripts start",
+    "start": "PORT=4000 react-scripts start",
     "watch": "concurrently --restart-tries 10 --names \"webpack,stylus\" --prefix name \"npm run start\" \"npm run styles-watch-all\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

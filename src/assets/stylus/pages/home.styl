@@ -1,10 +1,7 @@
 .home-page
-    display flex
-    flex-direction column
-    align-items center
+    flexbox-centered()
     .section-text
-        display flex
-        flex-direction column
+        flexbox()
         .section-title
             width 530px
             font-size 28px
@@ -15,7 +12,6 @@
                 padding 10px
         .section-desc
             width 360px
-            color var(--notActive)
             @media (max-width: 1000px)
                 width inherit
                 text-align center
@@ -28,8 +24,7 @@
         padding 84px
         margin-bottom 32px
         @media (max-width: 1000px)
-            display flex
-            flex-direction column
+            flexbox()
             text-align center
         .manifest-text
             margin-right 32px
@@ -50,12 +45,12 @@
                 margin-bottom 10px
                 margin-right inherit
         .right-manifest
-            display flex
-            flex-direction column
+            flexbox()
             text-align center
             .right-manifest--title
-                font-size 24px
+                font-size 32px
                 font-weight 600
+                color var(--white)
                 transition transform 20ms ease-in-out
                 &:hover
                     transform scale(1.2)
@@ -79,8 +74,7 @@
         align-items center
         padding 32px 160px
         @media (max-width: 1000px)
-            display flex
-            flex-direction column
+            flexbox()
             padding 10px
         .how-box
             display flex
@@ -92,7 +86,7 @@
             margin-bottom 64px
             border-radius 4px
             border 0.5px solid var(--stroke)
-            box-shadow 0px 2px 4px rgba(92, 92, 92, 0.25)
+            background var(--white)
             svg
                 width 100px
                 height 78px
@@ -100,8 +94,7 @@
             @media (max-width: 1000px)
                 margin-right inherit
             .how-box--group
-                display flex
-                flex-direction column
+                flexbox()
                 text-align left
                 .how-box--title
                     font-size 22px
@@ -115,20 +108,13 @@
         justify-content space-between
         padding 64px 160px
         width 100%
-        margin-bottom 120px
-        border 0.1px solid var(--cardBg)
-        border-radius 12px
-        background var(--cardBg)
+        color var(--black)
         svg
             width 430px
             height 250px
         @media (max-width: 1000px)
-            display flex
-            flex-direction column
+            flexbox()
             padding 10px
-            svg
-                width 100%
-                height 100%
 
         .join-text
             font-size 24px
@@ -136,3 +122,31 @@
                 margin-bottom 10px
             .start-button
                 font-size 18px
+
+    .white-bg
+        background var(--white)
+
+    .lightGreen-bg
+        background var(--lightGreen)
+
+    .lightBlue-bg
+        background var(--lightBlue)
+
+    .color-white
+        color var(--white)
+
+    // Wave
+    .layer-1
+        background-image url('../../img/layer-1.svg')
+    .layer-2
+        background-image url('../../img/layer-2.svg')
+    .layer-3
+        background-image url('../../img/layer-3.svg')
+    .spacer
+        aspect-ratio 960/300
+        width 100%
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+    .flip
+        transform rotate(180deg)

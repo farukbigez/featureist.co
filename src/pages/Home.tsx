@@ -29,6 +29,7 @@ export default function Home() {
 						<div className="how-box--desc">Learn the steps it takes to build a successful business.</div>
 					</div>
 				</div>
+
 				<div className="how-box">
 					<HelpHuman />
 					<div className="how-box--group">
@@ -36,6 +37,7 @@ export default function Home() {
 						<div className="how-box--desc">Find answers to questions you have about creating your own business.</div>
 					</div>
 				</div>
+
 				<div className="how-box">
 					<CommunityHuman />
 					<div className="how-box--group">
@@ -45,31 +47,36 @@ export default function Home() {
 				</div>
 			</div>
 
-
-
-			<div className="landing-section">
+			<div className="spacer layer-1"></div>
+			<div className="landing-section lightGreen-bg">
 				<div className="section-text">
 					<div className="section-title">Find out what your community wants and deploy that features</div>
 					<div className="section-desc">Through featureist.co you can see what’s your community want’s from you.</div>
 				</div>
 				<WhatHuman />
 			</div>
+			<div className="spacer layer-1 flip"></div>
 
-			<div className="landing-section">
+			
+			<div className="spacer layer-2"></div>
+			<div className="landing-section lightBlue-bg">
 				<SvgWhyHuman />
-				<div className="section-text">
+				<div className="section-text color-white">
 					<div className="section-title">Colloaborate with your community to community-driven product</div>
 					<div className="section-desc">Create vote polls to which feature that your community wants. </div>
 				</div>
 			</div>
+			<div className="spacer layer-2 flip"></div>
 
-			<div className="landing-section">
+			<div className="spacer layer-3"></div>
+			<div className="landing-section white-bg">
 				<div className="join-text">
 					<div className="section-title">Ready to Join Featureist.co ? </div>
 					<StartButton>Create a free account</StartButton>
 				</div>
 				<JoinHuman />
 			</div>
+			<div className="spacer layer-3 flip"></div>
 		</div>
 	)
 }

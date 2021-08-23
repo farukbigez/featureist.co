@@ -2,14 +2,14 @@
   --bodyFont: "'Poppins', sans-serif";
   --blue: #2196f3;
   --green: #28cd41;
-  --stroke: #dadada;
-  --cardBg: #f7f8fc;
-  --black: #000;
-  --notActive: #aaa;
-  --bodyText: #1d1d1d;
+  --black: #1d1d1d;
   --purple: #7f52ca;
   --yellow: #ffda63;
   --white: #fff;
+  --stroke: #dadada;
+  --notActive: #aaa;
+  --lightGreen: #c9ffd4;
+  --lightBlue: #214ed4;
 }
 *,
 *::before,
@@ -81,7 +81,8 @@ body {
 body {
   font-family: var(--bodyFont);
   font-weight: 500;
-  color: var(--bodyText);
+  color: var(--black);
+  background-color: #131b3a;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -101,8 +102,10 @@ svg {
   justify-content: space-between;
   width: 100%;
   padding: 5px 40px;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
-  background-color: var(--white);
+  color: var(--white);
+  border-bottom: solid var(--white) 1px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 @media (max-width: 1000px) {
   .header {
@@ -143,9 +146,9 @@ svg {
 .header .header-links a {
   display: flex;
   align-items: center;
-  font-size: 15px;
-  margin-right: 40px;
+  font-size: 16px;
   font-weight: 600;
+  margin-right: 40px;
 }
 .header .hamburger-menu {
   visibility: visible;
@@ -168,7 +171,8 @@ svg {
   height: 120px;
   width: 100%;
   margin-top: 30px;
-  box-shadow: inset 0px 2px 2px rgba(0,0,0,0.25);
+  border-top: solid var(--white) 1px;
+  border-radius: 6px;
 }
 @media (max-width: 1000px) {
   .footer {
@@ -181,6 +185,7 @@ svg {
   padding: 40px 180px;
 }
 .footer .link-group a {
+  color: var(--white);
   font-size: 18px;
   font-weight: 600;
 }
@@ -231,7 +236,6 @@ svg {
   height: 38px;
   color: var(--white);
   background: linear-gradient(90deg, rgba(255,107,0,0.09) 57.55%, rgba(0,0,0,0) 75.47%), var(--purple);
-  border: 0.5px solid var(--stroke);
   border-radius: 6px;
   cursor: pointer;
 }
@@ -291,7 +295,6 @@ svg {
 }
 .home-page .section-text .section-desc {
   width: 360px;
-  color: var(--notActive);
 }
 @media (max-width: 1000px) {
   .home-page .section-text .section-desc {
@@ -351,8 +354,9 @@ svg {
   text-align: center;
 }
 .home-page .manifest-section .right-manifest .right-manifest--title {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 600;
+  color: var(--white);
   transition: -webkit-transform;
   transition: transform;
   transition: transform, -webkit-transform;
@@ -406,7 +410,7 @@ svg {
   margin-bottom: 64px;
   border-radius: 4px;
   border: 0.5px solid var(--stroke);
-  box-shadow: 0px 2px 4px rgba(92,92,92,0.25);
+  background: var(--white);
 }
 .home-page .how-section .how-box svg {
   width: 100px;
@@ -436,10 +440,7 @@ svg {
   justify-content: space-between;
   padding: 64px 160px;
   width: 100%;
-  margin-bottom: 120px;
-  border: 0.1px solid var(--cardBg);
-  border-radius: 12px;
-  background: var(--cardBg);
+  color: var(--black);
 }
 .home-page .landing-section svg {
   width: 430px;
@@ -451,10 +452,6 @@ svg {
     flex-direction: column;
     padding: 10px;
   }
-  .home-page .landing-section svg {
-    width: 100%;
-    height: 100%;
-  }
 }
 .home-page .landing-section .join-text {
   font-size: 24px;
@@ -464,4 +461,36 @@ svg {
 }
 .home-page .landing-section .join-text .start-button {
   font-size: 18px;
+}
+.home-page .white-bg {
+  background: var(--white);
+}
+.home-page .lightGreen-bg {
+  background: var(--lightGreen);
+}
+.home-page .lightBlue-bg {
+  background: var(--lightBlue);
+}
+.home-page .color-white {
+  color: var(--white);
+}
+.home-page .layer-1 {
+  background-image: url("../img/layer-1.svg");
+}
+.home-page .layer-2 {
+  background-image: url("../img/layer-2.svg");
+}
+.home-page .layer-3 {
+  background-image: url("../img/layer-3.svg");
+}
+.home-page .spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.home-page .flip {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }

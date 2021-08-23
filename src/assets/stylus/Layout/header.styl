@@ -4,8 +4,10 @@
     justify-content space-between
     width 100%
     padding 5px 40px
-    box-shadow 0 4px 4px rgba(0, 0, 0, 0.1)
-    background-color var(--white)
+    color var(--white)
+    border-bottom solid var(--white) 1px
+    border-radius 6px
+    overflow hidden
     @media (max-width: 1000px)
         position fixed
         padding 15px 20px
@@ -31,9 +33,9 @@
         a
             display flex
             align-items center
-            font-size 15px
-            margin-right 40px
+            font-size 16px
             font-weight 600
+            margin-right 40px
     .hamburger-menu
         visibility visible
         cursor pointer
