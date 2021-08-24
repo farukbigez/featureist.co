@@ -33,8 +33,8 @@ export default function Home() {
 				<div className="how-box">
 					<HelpHuman />
 					<div className="how-box--group">
-						<div className="how-box--title">Help and support</div>
-						<div className="how-box--desc">Find answers to questions you have about creating your own business.</div>
+						<div className="how-box--title">Support</div>
+						<div className="how-box--desc">Recommend new feature and ideas to improve the tool.</div>
 					</div>
 				</div>
 

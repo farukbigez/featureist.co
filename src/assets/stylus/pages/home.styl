@@ -1,5 +1,6 @@
 .home-page
     flexbox-centered()
+    overflow-x hidden
     .section-text
         flexbox()
         .section-title
@@ -27,10 +28,10 @@
             flexbox()
             text-align center
         .manifest-text
+            width 60%
             margin-right 32px
             font-size 48px
             font-weight 600
-            width 45%
             background linear-gradient(to right, #FF6B00 0, #7F52CA 50%, #7F52CA 10%)
             background-position 0
             -webkit-background-clip text
@@ -80,7 +81,7 @@
             display flex
             align-items center
             width 100%
-            height 140px
+            height auto
             margin-right 20px
             padding 20px 25px
             margin-bottom 64px
@@ -98,7 +99,6 @@
                 text-align left
                 .how-box--title
                     font-size 22px
-                    font-weight 600
                 .how-box--desc
                     color var(--notActive)
 
