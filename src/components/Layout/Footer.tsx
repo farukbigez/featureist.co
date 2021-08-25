@@ -4,7 +4,7 @@ import { RoundLogo } from '../Icons'
 
 export default function Footer() {
 	return (
-		<div className="footer">
+		<div className="footer color-white">
 			<div className="link-group">
 				<Link to="/">About</Link>
 				<div className="link-name">Featurist.com</div>

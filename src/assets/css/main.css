@@ -38,6 +38,7 @@
   --notActive: #aaa;
   --lightGreen: #c9ffd4;
   --lightBlue: #214ed4;
+  --bg: #131b3a;
 }
 *,
 *::before,
@@ -110,7 +111,7 @@ body {
   font-family: var(--bodyFont);
   font-weight: 500;
   color: var(--black);
-  background-color: #131b3a;
+  background-color: var(--bg);
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -130,7 +131,6 @@ svg {
   justify-content: space-between;
   width: 100%;
   padding: 5px 40px;
-  color: var(--white);
   border-bottom: solid var(--white) 1px;
   border-radius: 6px;
   overflow: hidden;
@@ -217,7 +217,6 @@ svg {
   }
 }
 .footer .link-group a {
-  color: var(--white);
   font-size: 18px;
   font-weight: 600;
 }
@@ -231,6 +230,34 @@ svg {
 .footer .link-group .link-name {
   cursor: pointer;
   color: var(--notActive);
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 38px;
+  background: linear-gradient(90deg, rgba(255,107,0,0.09) 57.55%, rgba(0,0,0,0) 75.47%), var(--purple);
+  border-radius: 12px;
+  cursor: pointer;
+}
+.button a {
+  display: flex;
+  margin-right: 0 !important;
+  padding: 10px 16px;
+  border-radius: 10px;
+}
+.white-bg {
+  background: var(--white);
+}
+.lightGreen-bg {
+  background: var(--lightGreen);
+}
+.lightBlue-bg {
+  background: var(--lightBlue);
+}
+.color-white {
+  color: var(--white);
 }
 @font-face {
   font-family: 'Poppins';
@@ -260,23 +287,6 @@ svg {
   font-style: normal;
   font-display: swap;
 }
-.start-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 38px;
-  color: var(--white);
-  background: linear-gradient(90deg, rgba(255,107,0,0.09) 57.55%, rgba(0,0,0,0) 75.47%), var(--purple);
-  border-radius: 6px;
-  cursor: pointer;
-}
-.start-button a {
-  display: flex;
-  margin-right: 0 !important;
-  padding: 10px 16px;
-  border-radius: 10px;
-}
 .login-section {
   display: flex;
   justify-content: space-between;
@@ -291,23 +301,34 @@ svg {
   flex-direction: column;
   align-items: center;
 }
-.login-section .login-form .form-title {
+.login-section .login-form .form--title {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.login-section .login-form .form-desc {
+.login-section .login-form .form--desc {
   color: var(--notActive);
+  margin-bottom: 24px;
 }
-.login-section .form-switch {
+.login-section .form--switch {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   font-size: 18px;
+}
+.login-section .form--switch .login--switch {
+  text-align: center;
+}
+.login-section .form--switch .register--switch {
+  text-align: center;
+}
+.login-section .button {
+  font-size: 18px;
+  height: 58px;
+  font-weight: 600;
 }
 .home-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
   overflow-x: hidden;
 }
 .home-page .section-text {
@@ -389,7 +410,6 @@ svg {
 .home-page .manifest-section .right-manifest .right-manifest--title {
   font-size: 32px;
   font-weight: 600;
-  color: var(--white);
   transition: -webkit-transform 20ms ease-in-out;
   transition: transform 20ms ease-in-out;
   transition: transform 20ms ease-in-out, -webkit-transform 20ms ease-in-out;
@@ -408,7 +428,7 @@ svg {
   margin-bottom: 20px;
   color: var(--notActive);
 }
-.home-page .manifest-section .right-manifest .start-button {
+.home-page .manifest-section .right-manifest .button {
   font-size: 18px;
   height: 58px;
   font-weight: 600;
@@ -417,7 +437,7 @@ svg {
   transition: transform 250ms;
   transition: transform 250ms, -webkit-transform 250ms;
 }
-.home-page .manifest-section .right-manifest .start-button:hover {
+.home-page .manifest-section .right-manifest .button:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
 }
@@ -491,20 +511,8 @@ svg {
 .home-page .landing-section .join-text .section-title {
   margin-bottom: 10px;
 }
-.home-page .landing-section .join-text .start-button {
+.home-page .landing-section .join-text .button {
   font-size: 18px;
-}
-.home-page .white-bg {
-  background: var(--white);
-}
-.home-page .lightGreen-bg {
-  background: var(--lightGreen);
-}
-.home-page .lightBlue-bg {
-  background: var(--lightBlue);
-}
-.home-page .color-white {
-  color: var(--white);
 }
 .home-page .layer-1 {
   background-image: url("../img/layer-1.svg");

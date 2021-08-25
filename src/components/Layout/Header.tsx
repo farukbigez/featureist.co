@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import StartButton from '../StartButton'
+import Button from '../Button'
 import { NavbarLogo, MobileMenuLogo, HambugerMenu } from '../Icons/index'
 import classNames from 'classnames'
 
 export default function Header() {
 	return (
-		<div className="header">
+		<div className="header color-white">
 			<div className="header-logo">
 				<Link to="/">
 					<NavbarLogo className="navbar-logo" />
@@ -20,7 +20,7 @@ export default function Header() {
 				<Link to="/">Apps</Link>
 				<Link to="/">Community</Link>
 				<Link to="/">Account</Link>
-				<StartButton>Start a Voting</StartButton>
+				<Button type="start">Start a Voting</Button>
 			</div>
 			
 			<div className="hamburger-menu">

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import StartButton from '../components/StartButton'
+import Button from '../components/Button'
 import { LearnHuman, HelpHuman, CommunityHuman, WhatHuman, JoinHuman } from '../components/Icons'
 import SvgWhyHuman from '../components/Icons/WhyHuman'
 
@@ -15,9 +15,9 @@ export default function Home() {
 			<div className="manifest-section">
 				<div className="manifest-text">Take a feature request by your own community.</div>
 				<div className="right-manifest">
-					<div className="right-manifest--title">Listen your community!</div>
+					<div className="right-manifest--title color-white">Listen your community!</div>
 					<div className="right-manifest--desc">Featureist.co is a platform where your products get feature request from your own community.</div>
-					<StartButton>Start a Voting</StartButton>
+					<Button type="start">Start a Voting</Button>
 				</div>
 			</div>
 
@@ -72,7 +72,7 @@ export default function Home() {
 			<div className="landing-section white-bg">
 				<div className="join-text">
 					<div className="section-title">Ready to Join Featureist.co ? </div>
-					<StartButton>Create a free account</StartButton>
+					<Button type="start">Create a free account</Button>
 				</div>
 				<JoinHuman />
 			</div>

@@ -1,8 +1,8 @@
 .home-page
-    flexbox-centered()
+    flex-column()
     overflow-x hidden
     .section-text
-        flexbox()
+        flex-column()
         .section-title
             width 530px
             font-size 28px
@@ -25,7 +25,7 @@
         padding 84px
         margin-bottom 32px
         @media (max-width: 1000px)
-            flexbox()
+            flex-column()
             text-align center
         .manifest-text
             width 60%
@@ -46,12 +46,11 @@
                 margin-bottom 10px
                 margin-right inherit
         .right-manifest
-            flexbox()
+            flex-column()
             text-align center
             .right-manifest--title
                 font-size 32px
                 font-weight 600
-                color var(--white)
                 transition transform 20ms ease-in-out
                 &:hover
                     transform scale(1.2)
@@ -61,7 +60,7 @@
             .right-manifest--desc
                 margin-bottom 20px
                 color var(--notActive)
-            .start-button
+            .button
                 font-size 18px
                 height 58px
                 font-weight 600
@@ -75,7 +74,7 @@
         align-items center
         padding 32px 160px
         @media (max-width: 1000px)
-            flexbox()
+            flex-column()
             padding 10px
         .how-box
             display flex
@@ -95,7 +94,7 @@
             @media (max-width: 1000px)
                 margin-right inherit
             .how-box--group
-                flexbox()
+                flex-column()
                 text-align left
                 .how-box--title
                     font-size 22px
@@ -113,27 +112,15 @@
             width 430px
             height 250px
         @media (max-width: 1000px)
-            flexbox()
+            flex-column()
             padding 10px
 
         .join-text
             font-size 24px
             .section-title
                 margin-bottom 10px
-            .start-button
+            .button
                 font-size 18px
-
-    .white-bg
-        background var(--white)
-
-    .lightGreen-bg
-        background var(--lightGreen)
-
-    .lightBlue-bg
-        background var(--lightBlue)
-
-    .color-white
-        color var(--white)
 
     // Wave
     .layer-1
