@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { Link } from 'react-router-dom'
 
 import Button from '../components/Button'
 import { LearnHuman, HelpHuman, CommunityHuman, WhatHuman, JoinHuman } from '../components/Icons'
@@ -15,9 +16,11 @@ export default function Home() {
 			<div className="manifest-section">
 				<div className="manifest-text">Take a feature request by your own community.</div>
 				<div className="right-manifest">
-					<div className="right-manifest--title color-white">Listen your community!</div>
-					<div className="right-manifest--desc">Featureist.co is a platform where your products get feature request from your own community.</div>
-					<Button type="start">Start a Voting</Button>
+					<div className="right-manifest--title">Listen your community!</div>
+					<div className="right-manifest--desc color-notActive">Featureist.co is a platform where your products get feature request from your own community.</div>
+					<Link to="register">
+						<Button>Start a Voting</Button>
+					</Link>
 				</div>
 			</div>
 
@@ -26,7 +29,7 @@ export default function Home() {
 					<LearnHuman />
 					<div className="how-box--group">
 						<div className="how-box--title">Learn</div>
-						<div className="how-box--desc">Learn the steps it takes to build a successful business.</div>
+						<div className="how-box--desc color-notActive">Learn the steps it takes to build a successful business.</div>
 					</div>
 				</div>
 
@@ -61,7 +64,7 @@ export default function Home() {
 			<div className="spacer layer-2"></div>
 			<div className="landing-section lightBlue-bg">
 				<SvgWhyHuman />
-				<div className="section-text color-white">
+				<div className="section-text">
 					<div className="section-title">Colloaborate with your community to community-driven product</div>
 					<div className="section-desc">Create vote polls to which feature that your community wants. </div>
 				</div>
@@ -71,8 +74,10 @@ export default function Home() {
 			<div className="spacer layer-3"></div>
 			<div className="landing-section white-bg">
 				<div className="join-text">
-					<div className="section-title">Ready to Join Featureist.co ? </div>
-					<Button type="start">Create a free account</Button>
+					<div className="section-title color-black">Ready to Join Featureist.co ? </div>
+					<Link to="register">
+						<Button>Create a free account</Button>
+					</Link>
 				</div>
 				<JoinHuman />
 			</div>

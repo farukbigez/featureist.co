@@ -7,7 +7,7 @@ import classNames from 'classnames'
 
 export default function Header() {
 	return (
-		<div className="header color-white">
+		<div className="header">
 			<div className="header-logo">
 				<Link to="/">
 					<NavbarLogo className="navbar-logo" />
@@ -20,7 +20,9 @@ export default function Header() {
 				<Link to="/">Apps</Link>
 				<Link to="/">Community</Link>
 				<Link to="/">Account</Link>
-				<Button type="start">Start a Voting</Button>
+				<Link to="/register">
+					<Button type="primary">Start a Voting</Button>
+				</Link>
 			</div>
 			
 			<div className="hamburger-menu">

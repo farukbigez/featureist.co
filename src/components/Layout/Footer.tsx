@@ -4,7 +4,7 @@ import { RoundLogo } from '../Icons'
 
 export default function Footer() {
 	return (
-		<div className="footer color-white">
+		<div className="footer">
 			<div className="link-group">
 				<Link to="/">About</Link>
 				<div className="link-name">Featurist.com</div>
@@ -17,7 +17,7 @@ export default function Footer() {
 			</div>
 			<div className="link-group">
 				<Link to="/privacy">Privacy</Link>
-				<div className="link-name">Privacy Policy</div>
+				<div className="link-name color-notActive">Privacy Policy</div>
 			</div>
 		</div>
 	)

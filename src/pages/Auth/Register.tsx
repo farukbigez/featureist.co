@@ -7,10 +7,10 @@ import { Input } from '../../components/Input'
 export default function Login() {
 	function handleOptionSwitch () { window.location.replace('/login') }
 	return (
-		<div className="auth-section color-white">
+		<div className="auth-section">
 			<div className="auth-form">
 				<div className="form--title">Register</div>
-				<div className="form--desc">To Begin your journey at Featureist.co, we need you to register our system.</div>
+				<div className="form--desc color-notActive">To Begin your journey at Featureist.co, we need you to register our system.</div>
 				<div className="form-switch">
 					<div 
 						className="option-switch option-switch--notActive"
@@ -30,7 +30,7 @@ export default function Login() {
 				</div>
 				<Input type="text" placeholder="Email" />
 				<Input type="password" placeholder="Password" />
-				<Button type="start">Register</Button>
+				<Button type="primary">Register</Button>
 			</div>
 			<RegisterHuman />
 		</div>

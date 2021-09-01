@@ -8,13 +8,13 @@ interface ButtonProps {
 	children?: React.ReactNode;
 	onClick?: React.MouseEventHandler;
 	className?: string;
-	type: 'start';
+	type?: 'primary';
 }
 
 export default function Button({ disabled, loading, children, onClick, className, type }: ButtonProps) {
-	if (type === 'start')
+	if (type === 'primary')
 		return (
-			<div className="button color-white">
+			<div className="button">
 				<Link to="/login">{ children }</Link>
 			</div>
 		)

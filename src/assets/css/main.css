@@ -110,7 +110,7 @@ body {
 body {
   font-family: var(--bodyFont);
   font-weight: 500;
-  color: var(--black);
+  color: var(--white);
   background-color: var(--bg);
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
@@ -124,6 +124,13 @@ body {
 }
 svg {
   flex-shrink: 0;
+}
+.content-container,
+.page-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-grow: 1;
 }
 .header {
   display: flex;
@@ -195,7 +202,6 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 120px;
   width: 100%;
   margin-top: 30px;
   border-top: solid var(--white) 1px;
@@ -229,7 +235,6 @@ svg {
 }
 .footer .link-group .link-name {
   cursor: pointer;
-  color: var(--notActive);
 }
 .button {
   display: flex;
@@ -239,6 +244,7 @@ svg {
   height: 38px;
   background: linear-gradient(90deg, rgba(255,107,0,0.09) 57.55%, rgba(0,0,0,0) 75.47%), var(--purple);
   border-radius: 12px;
+  color: var(--white);
   cursor: pointer;
 }
 .button a {
@@ -256,8 +262,11 @@ svg {
 .lightBlue-bg {
   background: var(--lightBlue);
 }
-.color-white {
-  color: var(--white);
+.color-black {
+  color: var(--black);
+}
+.color-notActive {
+  color: var(--notActive);
 }
 @font-face {
   font-family: 'Poppins';
@@ -365,7 +374,6 @@ svg {
   margin-bottom: 10px;
 }
 .auth-section .auth-form .form--desc {
-  color: var(--notActive);
   margin-bottom: 24px;
 }
 .auth-section .form-switch {
@@ -511,7 +519,6 @@ svg {
 }
 .home-page .manifest-section .right-manifest .right-manifest--desc {
   margin-bottom: 20px;
-  color: var(--notActive);
 }
 .home-page .manifest-section .right-manifest .button {
   font-size: 18px;
@@ -568,16 +575,12 @@ svg {
 .home-page .how-section .how-box .how-box--group .how-box--title {
   font-size: 22px;
 }
-.home-page .how-section .how-box .how-box--group .how-box--desc {
-  color: var(--notActive);
-}
 .home-page .landing-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 64px 160px;
   width: 100%;
-  color: var(--black);
 }
 .home-page .landing-section svg {
   width: 430px;
@@ -618,4 +621,20 @@ svg {
 .home-page .flip {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 0;
+}
+.not-found .not-found--404 {
+  font-size: 120px;
+  line-height: 220px;
+}
+.not-found .not-found--text {
+  font-size: 20px;
+  margin-top: -10px;
 }
