@@ -1,0 +1,70 @@
+.auth-section
+    flex-center()
+    padding 64px 150px
+    overflow-x hidden
+    svg
+        width 500px
+        height 250px
+    hr
+        height 2px
+        width 100%
+        margin 16px 0
+        border none
+        border-radius 1px
+        overflow hidden
+        background var(--white)
+    @media (max-width: 1000px)
+        flex-direction column
+        svg
+            width 460px
+            height 250px
+    .auth-form
+        flex-column-center()
+        width 100%
+        margin-right 64px
+        .form--title
+            font-size 28px
+            font-weight 600
+            margin-bottom 10px
+        .form--desc
+            color var(--notActive)
+            margin-bottom 24px
+    .form-switch
+        flex-center()
+        font-size 18px
+        width 100%
+        cursor pointer
+        .option-switch
+            text-align center
+            width 100%
+            &.option-switch--active
+                color var(--purple)
+                hr
+                    background var(--purple)
+            &.option-switch--notActive
+                color var(--notActive)
+                hr
+                    background var(--notActive)
+    .names
+        display flex
+        width 100%
+        .input
+            &:first-child
+                margin-right 8px
+    .input
+        margin-bottom 24px
+    .auth--forgot-pass
+        border-bottom 1px solid var(--purple)
+        cursor pointer
+    .button
+        font-size 18px
+        height 58px
+        font-weight 600
+        margin-top 12px
+
+    // display stuff
+    // positioning stuff
+    // box-model stuff
+    // typography
+    // manipulation
+    // misc

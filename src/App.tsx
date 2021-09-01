@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom'
 import './assets/css/main.css'
 
 import Login from './pages/Auth/Login'
+import Register from './pages/Auth/Register'
+import ForgotPass from './pages/Auth/ForgotPass'
 
 import NotFound from './pages/NotFound'
 import Home from './pages/Home'
@@ -25,9 +27,11 @@ export default function App() {
 					</Switch>
 				</Route>
 
-				<Route exact path={[ '/login', 'register', 'forgot-password', 'reset-password' ]}>
+				<Route exact path={[ '/login', '/register', '/forgot-pass', '/reset-pass' ]}>
 					<AppLayout>
 						<Route path="/login" component={Login} />
+						<Route path="/register" component={Register} />
+						<Route path="/forgot-pass" component={ForgotPass} />
 					</AppLayout>
 				</Route>
 

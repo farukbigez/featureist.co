@@ -1,0 +1,23 @@
+.input
+    display flex
+    border-radius 4px
+    border 2px solid var(--stroke)
+    overflow hidden
+    width 100%
+    &.input--focused
+        border-color var(--blue)
+        box-shadow 0 2px 10px alpha(lightGreen, 20%)
+    input
+        width 100%
+        padding 8px
+        height 54px
+        background var(--white)
+        line-height 16px
+        border none
+        outline none
+        resize none
+        caret-color var(--blue)
+        &::placeholder
+            color var(--notActive)
+            font-size 16px
+            font-weight 300

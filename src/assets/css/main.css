@@ -287,44 +287,129 @@ svg {
   font-style: normal;
   font-display: swap;
 }
-.login-section {
+.input {
   display: flex;
-  justify-content: space-between;
-  padding: 64px 200px;
+  border-radius: 4px;
+  border: 2px solid var(--stroke);
+  overflow: hidden;
+  width: 100%;
 }
-.login-section svg {
+.input.input--focused {
+  border-color: var(--blue);
+  box-shadow: 0 2px 10px rgba(201,255,212,0.2);
+}
+.input input {
+  width: 100%;
+  padding: 8px;
+  height: 54px;
+  background: var(--white);
+  line-height: 16px;
+  border: none;
+  outline: none;
+  resize: none;
+  caret-color: var(--blue);
+}
+.input input::-webkit-input-placeholder {
+  color: var(--notActive);
+  font-size: 16px;
+  font-weight: 300;
+}
+.input input:-ms-input-placeholder {
+  color: var(--notActive);
+  font-size: 16px;
+  font-weight: 300;
+}
+.input input::placeholder {
+  color: var(--notActive);
+  font-size: 16px;
+  font-weight: 300;
+}
+.auth-section {
+  display: flex;
+  align-items: center;
+  padding: 64px 150px;
+  overflow-x: hidden;
+}
+.auth-section svg {
   width: 500px;
   height: 250px;
 }
-.login-section .login-form {
+.auth-section hr {
+  height: 2px;
+  width: 100%;
+  margin: 16px 0;
+  border: none;
+  border-radius: 1px;
+  overflow: hidden;
+  background: var(--white);
+}
+@media (max-width: 1000px) {
+  .auth-section {
+    flex-direction: column;
+  }
+  .auth-section svg {
+    width: 460px;
+    height: 250px;
+  }
+}
+.auth-section .auth-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  margin-right: 64px;
 }
-.login-section .login-form .form--title {
+.auth-section .auth-form .form--title {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.login-section .login-form .form--desc {
+.auth-section .auth-form .form--desc {
   color: var(--notActive);
   margin-bottom: 24px;
 }
-.login-section .form--switch {
+.auth-section .form-switch {
   display: flex;
   align-items: center;
   font-size: 18px;
+  width: 100%;
+  cursor: pointer;
 }
-.login-section .form--switch .login--switch {
+.auth-section .form-switch .option-switch {
   text-align: center;
+  width: 100%;
 }
-.login-section .form--switch .register--switch {
-  text-align: center;
+.auth-section .form-switch .option-switch.option-switch--active {
+  color: var(--purple);
 }
-.login-section .button {
+.auth-section .form-switch .option-switch.option-switch--active hr {
+  background: var(--purple);
+}
+.auth-section .form-switch .option-switch.option-switch--notActive {
+  color: var(--notActive);
+}
+.auth-section .form-switch .option-switch.option-switch--notActive hr {
+  background: var(--notActive);
+}
+.auth-section .names {
+  display: flex;
+  width: 100%;
+}
+.auth-section .names .input:first-child {
+  margin-right: 8px;
+}
+.auth-section .input {
+  margin-bottom: 24px;
+}
+.auth-section .auth--forgot-pass {
+  border-bottom: 1px solid var(--purple);
+  cursor: pointer;
+}
+.auth-section .button {
   font-size: 18px;
   height: 58px;
   font-weight: 600;
+  margin-top: 12px;
 }
 .home-page {
   display: flex;
