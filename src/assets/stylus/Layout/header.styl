@@ -5,10 +5,12 @@
     width 100%
     padding 5px 40px
     border-bottom solid var(--white) 1px
-    border-radius 6px
-    overflow hidden
+    border-radius 0 0 6px 6px
+    background var(--bg)
+    z-index 1
     @media (max-width: 1000px)
         position fixed
+        top 0
         padding 15px 20px
     .header-logo
         .mobile-logo
@@ -36,7 +38,6 @@
             margin-right 40px
     .hamburger-menu
         visibility visible
-        cursor pointer
         svg
             width 24px
             height 18px

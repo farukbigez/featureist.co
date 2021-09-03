@@ -25,10 +25,10 @@ export default function Home() {
 			</div>
 
 			<div className="how-section">
-				<div className="how-box">
+				<div className="how-box ">
 					<LearnHuman />
 					<div className="how-box--group">
-						<div className="how-box--title">Learn</div>
+						<div className="how-box--title color-black">Learn</div>
 						<div className="how-box--desc color-notActive">Learn the steps it takes to build a successful business.</div>
 					</div>
 				</div>
@@ -36,16 +36,16 @@ export default function Home() {
 				<div className="how-box">
 					<HelpHuman />
 					<div className="how-box--group">
-						<div className="how-box--title">Support</div>
-						<div className="how-box--desc">Recommend new feature and ideas to improve the tool.</div>
+						<div className="how-box--title color-black">Support</div>
+						<div className="how-box--desc color-notActive">Recommend new feature and ideas to improve the tool.</div>
 					</div>
 				</div>
 
 				<div className="how-box">
 					<CommunityHuman />
 					<div className="how-box--group">
-						<div className="how-box--title">Community</div>
-						<div className="how-box--desc">Share ideas and collaborate with other like-minded people.</div>
+						<div className="how-box--title color-black">Community</div>
+						<div className="how-box--desc color-notActive">Share ideas and collaborate with other like-minded people.</div>
 					</div>
 				</div>
 			</div>
@@ -53,8 +53,8 @@ export default function Home() {
 			<div className="spacer layer-1"></div>
 			<div className="landing-section lightGreen-bg">
 				<div className="section-text">
-					<div className="section-title">Find out what your community wants and deploy that features</div>
-					<div className="section-desc">Through featureist.co you can see what’s your community want’s from you.</div>
+					<div className="section-title color-bg">Find out what your community wants and deploy that features</div>
+					<div className="section-desc color-notActive">Through featureist.co you can see what’s your community want’s from you.</div>
 				</div>
 				<WhatHuman />
 			</div>

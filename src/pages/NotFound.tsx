@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 
 export function NotFound () {
 	return (
-		<div className="not-found">
+		<div className="content-container not-found">
 			<Helmet>
 				<title>404 - Not Found</title>
 			</Helmet>

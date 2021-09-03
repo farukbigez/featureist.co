@@ -9,13 +9,13 @@ import { Input } from '../../components/Input'
 
 export default function Login() {
 	return (
-		<div className="auth-section">
+		<div className="content-container auth-section">
 
 			<div className="auth-form">
 				<div className="form--title">Forgot Password?</div>
 				<div className="form--desc">Don’t worry we’re backing you up.</div>
 				<Input type="text" placeholder="Email" />
-				<Button type="primary">Send Email</Button>
+				<Button>Send Email</Button>
 			</div>
 
 			<ForgotPassHuman />

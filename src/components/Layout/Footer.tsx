@@ -7,12 +7,12 @@ export default function Footer() {
 		<div className="footer">
 			<div className="link-group">
 				<Link to="/">About</Link>
-				<div className="link-name">Featurist.com</div>
+				<div className="link-name color-notActive">Featurist.com</div>
 
 			</div>
 			<div className="link-group">
 				<Link to="/mailto:info@featureist.co">Contact</Link>
-				<div className="link-name">info@featureist.co</div>
+				<div className="link-name color-notActive">info@featureist.co</div>
 
 			</div>
 			<div className="link-group">

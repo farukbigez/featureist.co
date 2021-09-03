@@ -36,9 +36,9 @@ export default function App() {
 					</Route>
 
 					<Route path="*">
-						<LandingLayout>
+						<AppLayout>
 							<NotFound />
-						</LandingLayout>
+						</AppLayout>
 					</Route>
 				</Switch>
 			</div>

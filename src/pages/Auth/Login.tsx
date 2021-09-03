@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 export default function Login() {
 	function handleOptionSwitch () { window.location.replace('/register') }
 	return (
-		<div className="auth-section">
+		<div className="content-container auth-section">
 			<div className="auth-form">
 				<div className="form--title">Login</div>
 				<div className="form--desc color-notActive">Thanks for coming to Featureist.co, let’s get voted or voting for your product.</div>

@@ -128,9 +128,10 @@ svg {
 .content-container,
 .page-content {
   display: flex;
-  width: 100%;
   flex-direction: column;
   flex-grow: 1;
+  justify-content: center;
+  width: 100%;
 }
 .header {
   display: flex;
@@ -139,12 +140,14 @@ svg {
   width: 100%;
   padding: 5px 40px;
   border-bottom: solid var(--white) 1px;
-  border-radius: 6px;
-  overflow: hidden;
+  border-radius: 0 0 6px 6px;
+  background: var(--bg);
+  z-index: 1;
 }
 @media (max-width: 1000px) {
   .header {
     position: fixed;
+    top: 0;
     padding: 15px 20px;
   }
 }
@@ -186,7 +189,6 @@ svg {
 }
 .header .hamburger-menu {
   visibility: visible;
-  cursor: pointer;
 }
 .header .hamburger-menu svg {
   width: 24px;
@@ -265,6 +267,9 @@ svg {
 .color-black {
   color: var(--black);
 }
+.color-bg {
+  color: var(--bg);
+}
 .color-notActive {
   color: var(--notActive);
 }
@@ -336,6 +341,7 @@ svg {
 .auth-section {
   display: flex;
   align-items: center;
+  flex-direction: unset;
   padding: 64px 150px;
   overflow-x: hidden;
 }
@@ -365,7 +371,6 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   margin-right: 64px;
 }
 .auth-section .auth-form .form--title {
@@ -632,9 +637,9 @@ svg {
 }
 .not-found .not-found--404 {
   font-size: 120px;
-  line-height: 220px;
+  line-height: 420px;
 }
 .not-found .not-found--text {
   font-size: 20px;
-  margin-top: -10px;
+  margin-top: -120px;
 }

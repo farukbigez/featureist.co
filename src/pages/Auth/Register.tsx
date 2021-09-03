@@ -7,7 +7,7 @@ import { Input } from '../../components/Input'
 export default function Login() {
 	function handleOptionSwitch () { window.location.replace('/login') }
 	return (
-		<div className="auth-section">
+		<div className="content-container auth-section">
 			<div className="auth-form">
 				<div className="form--title">Register</div>
 				<div className="form--desc color-notActive">To Begin your journey at Featureist.co, we need you to register our system.</div>

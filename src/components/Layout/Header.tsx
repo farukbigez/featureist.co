@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 import Button from '../Button'
 import { NavbarLogo, MobileMenuLogo, HambugerMenu } from '../Icons/index'
-import classNames from 'classnames'
 
 export default function Header() {
 	return (
