@@ -9,7 +9,7 @@ export function NotFound () {
 			</Helmet>
 
 			<div className="not-found--404">404</div>
-			<div className="not-found--text">Not Found</div>
+			<div className="not-found--text">Page Not Found</div>
 		</div>
 	)
 }
