@@ -23,7 +23,7 @@ if(REACT_APP_ENVIRONMENT === 'production')
 		]
 	})
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('main'))
 
 // Can also use with React Concurrent Mode
 // ReactDOM.createRoot(document.getElementById('root')).render(<App />)
