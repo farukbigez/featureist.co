@@ -8,14 +8,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "iconize": "svgr --typescript --icon --out-dir ./src/components/Icons ./src/assets/icons",
-
     "build:production": "env-cmd -f .env.production yarn run build-step:react",
     "build:development": "env-cmd -f .env.development yarn run build-step:react",
-
     "build-step:react": "yarn run build-step:styles && react-scripts build && yarn run build-step:root",
     "build-step:styles": "run-p styles:**",
     "build-step:root": "cd build && mkdir root && mv *.html *.json ./root",
-
     "styles:main": "stylus -r --include-css -u autoprefixer-stylus ./src/assets/stylus/main.styl -o ./src/assets/css/main.css",
     "styles-watch-all": "run-p styles-watch:**",
     "styles-watch:main": "stylus -r --include-css -u autoprefixer-stylus -w ./src/assets/stylus/main.styl -o ./src/assets/css/main.css"
@@ -42,13 +39,15 @@
   "dependencies": {
     "@sentry/react": "^6.12.0",
     "@sentry/tracing": "^6.12.0",
+    "@types/react-select": "^4.0.17",
     "classnames": "^2.3.1",
     "modern-css-reset": "^1.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.3",
+    "react-select": "^4.3.1"
   },
   "devDependencies": {
     "@svgr/cli": "^5.5.0",
