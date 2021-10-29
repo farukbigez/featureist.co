@@ -8,6 +8,7 @@ import ForgotPass from './pages/Auth/ForgotPass'
 
 import { NotFound } from './pages/NotFound'
 import Home from './pages/Home'
+import Apps from './pages/Apps'
 
 import LandingLayout from './components/Layout/LandingLayout'
 import AppLayout from './components/Layout/AppLayout'
@@ -27,11 +28,12 @@ export default function App() {
 						</Switch>
 					</Route>
 
-					<Route exact path={[ '/login', '/register', '/forgot-pass', '/reset-pass' ]}>
+					<Route exact path={[ '/login', '/register', '/forgot-pass', '/reset-pass', '/apps' ]}>
 						<AppLayout>
 							<Route path="/login" component={Login} />
 							<Route path="/register" component={Register} />
 							<Route path="/forgot-pass" component={ForgotPass} />
+							<Route path="/apps" component={Apps} />
 						</AppLayout>
 					</Route>
 
