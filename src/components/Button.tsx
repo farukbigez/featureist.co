@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Link } from 'react-router-dom'
 
 interface ButtonProps {
 	disabled?: boolean;
@@ -12,12 +11,13 @@ interface ButtonProps {
 }
 
 export default function Button({ disabled, loading, children, onClick, className, type }: ButtonProps) {
-	if (type === 'primary')
-		return (
-			<div className="button">
-				<Link to="/login">{ children }</Link>
-			</div>
-		)
+	// When type is necesarry 
+	// if (type === 'primary')
+	// 	return (
+	// 		<div className="button">
+	// 			<Link to="/login">{ children }</Link>
+	// 		</div>
+	// 	)
 
 	return (
 		<div 

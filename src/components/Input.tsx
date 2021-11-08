@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import classNames from 'classnames'
+import { SearchIcon } from './Icons'
 
 export interface InputProps {
-	type: 'text' | 'email' | 'password';
+	type: 'text' | 'email' | 'password' | 'search';
 	value?: string | number;
 	placeholder?: string;
 	disabled?: boolean;
@@ -18,8 +19,23 @@ export const Input = ({ type, value, placeholder, disabled, onChange, className 
 		'input--disabled': disabled,
 	}, className)
 
+	// return (
+	// 	<div className={parentClassName}>
+	// 		<input
+	// 			type={type}
+	// 			value={value}
+	// 			placeholder={placeholder}
+	// 			disabled={disabled}
+	// 			onChange={(event) => { if (onChange) onChange(event.target.value) }}
+	// 			onFocus={() => setIsFocused(true)}
+	// 			onBlur={() => setIsFocused(false)}
+	// 		/>
+	// 	</div>
+	// )
+
 	return (
 		<div className={parentClassName}>
+			{ type === 'search' && <SearchIcon /> }
 			<input
 				type={type}
 				value={value}
@@ -28,7 +44,7 @@ export const Input = ({ type, value, placeholder, disabled, onChange, className 
 				onChange={(event) => { if (onChange) onChange(event.target.value) }}
 				onFocus={() => setIsFocused(true)}
 				onBlur={() => setIsFocused(false)}
-			/>
+			/>			
 		</div>
 	)
 }

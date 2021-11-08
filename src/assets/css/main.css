@@ -200,6 +200,9 @@ svg {
     display: none;
   }
 }
+.header .button {
+  padding: 10px 20px;
+}
 .footer {
   display: flex;
   align-items: center;
@@ -273,6 +276,45 @@ svg {
 .color-notActive {
   color: var(--notActive);
 }
+.filter {
+  width: 100%;
+  background: var(--white);
+  border-radius: 6px;
+}
+.filter .filter-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.filter .filter-item .filter-select {
+  display: flex;
+  align-items: center;
+}
+.filter .filter-item .filter-select .react-select-container {
+  margin-right: 40px;
+  width: 135px;
+}
+.filter .filter-item .filter-select .react-select-container .react-select__control {
+  border: 1px solid var(--white);
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.25);
+}
+.filter .filter-item .filter-search {
+  display: flex;
+  align-items: center;
+}
+.filter .filter-item .filter--text {
+  font-size: 18px;
+  margin-right: 20px;
+}
+.filter .input {
+  border: 2px solid var(--white);
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.25);
+}
+.filter .input input {
+  height: 34px;
+}
 @font-face {
   font-family: 'Poppins';
   src: url("../fonts/Poppins-Light.woff") format('woff'), url("../fonts/Poppins-Light.woff2") format('woff2');
@@ -303,14 +345,19 @@ svg {
 }
 .input {
   display: flex;
-  border-radius: 4px;
-  border: 2px solid var(--stroke);
-  overflow: hidden;
+  align-items: center;
   width: 100%;
+  border: 2px solid var(--stroke);
+  border-radius: 4px;
+  overflow: hidden;
 }
 .input.input--focused {
   border-color: var(--blue);
   box-shadow: 0 2px 10px rgba(201,255,212,0.2);
+}
+.input svg {
+  width: 24px;
+  height: 24px;
 }
 .input input {
   width: 100%;
@@ -337,6 +384,27 @@ svg {
   color: var(--notActive);
   font-size: 16px;
   font-weight: 300;
+}
+.apps-page {
+  margin: 36px 64px;
+}
+.apps-page .manifest-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.apps-page .manifest-section svg {
+  width: 450px;
+  height: 400px;
+}
+.apps-page .manifest-section .left-column .left-column--title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.apps-page .manifest-section .left-column .left-column--desc {
+  font-size: 20px;
+  color: var(--lightGreen);
 }
 .auth-section {
   display: flex;

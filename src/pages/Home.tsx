@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<div className="home-page">
 			<Helmet>
-				<title>Featureist.co - New way of the feature</title>
+				<title>Featureist.co - Request a feature</title>
 			</Helmet>
 			
 			<div className="manifest-section">
