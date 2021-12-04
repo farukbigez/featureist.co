@@ -1,10 +1,10 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
-import Button from '../components/Button'
-import { LearnHuman, HelpHuman, CommunityHuman, WhatHuman, JoinHuman } from '../components/Icons'
-import SvgWhyHuman from '../components/Icons/WhyHuman'
+import Button from '../../components/Button'
+import { LearnHuman, HelpHuman, CommunityHuman, WhatHuman, JoinHuman } from '../../components/Icons'
+import SvgWhyHuman from '../../components/Icons/WhyHuman'
 
 export default function Home() {
 	return (
@@ -12,6 +12,7 @@ export default function Home() {
 			<Helmet>
 				<title>Featureist.co - Request a feature</title>
 			</Helmet>
+			<Outlet />
 			
 			<div className="manifest-section">
 				<div className="manifest-text">Take a feature request by your own community.</div>

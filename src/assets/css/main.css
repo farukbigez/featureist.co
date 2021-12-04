@@ -276,6 +276,51 @@ svg {
 .color-notActive {
   color: var(--notActive);
 }
+.feature-card--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 330px;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.feature-card--container:last-child {
+  margin-right: 0;
+}
+.feature-card--container .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+}
+.feature-card--container .card-content .card-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+  color: var(--black);
+}
+.feature-card--container .card-content .card-header .user-pp {
+  width: 1em;
+  height: 1em;
+  margin-right: 3px;
+  border-radius: 50%;
+  border: 1px solid var(--stroke);
+}
+.feature-card--container .card-content .card-body {
+  text-align: left;
+  margin-bottom: 35px;
+}
+.feature-card--container .card-content .card-body .card-title {
+  margin-bottom: 25px;
+}
+.feature-card--container .card-content .card-body .card-desc {
+  font-size: 12px;
+  color: #9b9b9b;
+}
 .filter {
   width: 100%;
   background: var(--white);
@@ -385,8 +430,12 @@ svg {
   font-size: 16px;
   font-weight: 300;
 }
+.input .input--comment {
+  height: inherit;
+}
 .apps-page {
   margin: 36px 64px;
+  color: var(--black);
 }
 .apps-page .manifest-section {
   display: flex;
@@ -405,6 +454,11 @@ svg {
 .apps-page .manifest-section .left-column .left-column--desc {
   font-size: 20px;
   color: var(--lightGreen);
+}
+.apps-page .feature-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 .auth-section {
   display: flex;

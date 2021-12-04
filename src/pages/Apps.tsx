@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import Select from 'react-select'
 
 import { AppsHuman, NavbarLogo, UnfoldMore } from '../components/Icons'
+import FeatureCard from '../components/FeatureCard'
 import Filter  from '../components/Filter'
 
 const options = [
@@ -77,6 +78,23 @@ export default function Apps() {
 				</Filter>
 			</div>
 
+			<div className="feature-section">
+				<FeatureCard 
+					name="onurab" 
+					cardTitle="Get More clickable things during something about something something something something something something" 
+					cardDesc="Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor" 
+				/>
+				<FeatureCard 
+					name="onurab" 
+					cardTitle="Get More clickable things during something about something something something something something something" 
+					cardDesc="Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"  
+				/>
+				<FeatureCard 
+					name="onurab" 
+					cardTitle="Get More clickable things during something about something something something something something something" 
+					cardDesc="Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor" 
+				/>
+			</div>
 		</div>
 	)
 }

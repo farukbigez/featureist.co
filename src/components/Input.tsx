@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { SearchIcon } from './Icons'
 
 export interface InputProps {
-	type: 'text' | 'email' | 'password' | 'search';
+	type: 'text' | 'email' | 'password' | 'search' | 'comment';
 	value?: string | number;
 	placeholder?: string;
 	disabled?: boolean;
@@ -32,6 +32,23 @@ export const Input = ({ type, value, placeholder, disabled, onChange, className 
 	// 		/>
 	// 	</div>
 	// )
+
+
+	if (type === 'comment')
+		return (
+			<div className={parentClassName}>
+				<input
+					className="input--comment"
+					type={type}
+					value={value}
+					placeholder={placeholder}
+					disabled={disabled}
+					onChange={(event) => { if (onChange) onChange(event.target.value) }}
+					onFocus={() => setIsFocused(true)}
+					onBlur={() => setIsFocused(false)}
+				/>			
+			</div>
+		)
 
 	return (
 		<div className={parentClassName}>
