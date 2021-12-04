@@ -16,8 +16,8 @@ export default function Header() {
 
 			<div className="header-links">
 				<Link to="/">Home</Link>
-				<Link to="/">Apps</Link>
-				<Link to="/">Community</Link>
+				<Link to="/apps">Apps</Link>
+				<Link to="/community">Community</Link>
 				<Link to="/">Account</Link>
 				<Link to="/register">
 					<Button type="primary">Start a Voting</Button>

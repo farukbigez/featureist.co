@@ -1,14 +1,15 @@
 import React from 'react'
-import '../../assets/css/main.css'
+import { Outlet } from 'react-router'
 
+import '../../assets/css/main.css'
 import Header from './Header'
 
-export default function LandingLayout ({ children }: { children: React.ReactNode }) {
+export default function LandingLayout () {
 	return (
 		<>
 			<Header />
 			<div className="content-container">
-				{children}
+				<Outlet />
 			</div>
 		</>
 	)

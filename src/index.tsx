@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import * as Sentry from '@sentry/react'
 import { Integrations } from '@sentry/tracing'
 
-import reportWebVitals from './reportWebVitals'
 import App from './App'
 import { Env } from './types/global'
 
@@ -27,8 +26,3 @@ ReactDOM.render(<App />, document.getElementById('main'))
 
 // Can also use with React Concurrent Mode
 // ReactDOM.createRoot(document.getElementById('root')).render(<App />)
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals()
